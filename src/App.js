@@ -9,7 +9,7 @@ function App() {
   const [descriptionIndex, setDescriptionIndex] = useState(0);
 
   useEffect(() => {
-    fetch('/images_descriptions.json')
+    fetch(process.env.PUBLIC_URL + '/images_descriptions.json')
       .then((response) => response.json())
       .then((data) => setImageDescriptions(data.image_descriptions))
       .catch((error) => console.error("Error fetching image descriptions:", error));
