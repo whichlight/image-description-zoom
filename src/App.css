@@ -26,6 +26,9 @@
 }
 
 
+.controls{
+  margin-bottom:15px;
+}
 
 /* Style for the image container */
 .images-container {
@@ -62,6 +65,10 @@
 /* Style for the slider container */
 .slider-container {
   margin: 20px 0; /* Add vertical space around the slider */
+}
+
+.info{
+  width:400px;
 }
 
 .slider-container input{

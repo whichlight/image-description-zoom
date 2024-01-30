@@ -47,6 +47,28 @@ function App() {
   return (
     <div className="App">
       <h1>Image Description Zoom</h1>
+      <div className="info">
+        <p>
+          This is a prototype to illustrate descriptions of an image at a range
+          of detail written by AI. Move the slider to increase the detail of the
+          description.{" "}
+          <small>
+            Source:
+            <a
+              target="_blank"
+              href="https://unsplash.com/photos/man-wearing-black-jacket-fzcluHBur3o"
+            >
+              [1]
+            </a>
+            <a target="_blank" href="https://www.mdpi.com/2413-8851/3/2/64">
+              [2]
+            </a>
+            <a target="_blank" href="https://www.moma.org/artists/4016">
+              [3]
+            </a>
+          </small>
+        </p>
+      </div>
 
       <div className="controls">
         <div>
