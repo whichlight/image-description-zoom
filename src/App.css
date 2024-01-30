@@ -12,15 +12,14 @@
 
 .selected-image-container {
   align-self: flex-start;
-
   display: flex;
   justify-content: center; /* Center the image horizontally */
   align-items: center; /* Center the image vertically */
 }
 
 .selected-image-container img {
-  max-height: 800px; /* Maximum image height */
-  max-width: 700px; /* Maximum image width is 100% of its container */
+  max-height: auto; /* Maximum image height */
+  max-width: 100%; /* Maximum image width is 100% of its container */
   width: auto; /* Default width is set to auto */
   height: auto; /* Default height is set to auto */
   object-fit: contain; /* The image will be scaled to maintain its aspect ratio without being cropped */
@@ -62,12 +61,11 @@
 
 /* Style for the slider container */
 .slider-container {
-  width: 100%; /* Adjust slider width as needed */
   margin: 20px 0; /* Add vertical space around the slider */
 }
 
 .slider-container input{
-  width:300px;
+  width:400px;
 }
 
 /* Style for the description text */
@@ -78,6 +76,29 @@
 
 .selected-content{
   display:flex;
+  flex-direction: row; /* Default to row for larger screens */
+
+}
+
+
+@media (max-width: 768px) {
+  .selected-content {
+    flex-direction: column;
+  }
+
+  .selected-image-container {
+    order: 1;
+  }
+
+  .slider-container {
+    order: 4;
+    width: 100%; /* Adjust the width of the slider for mobile */
+  }
+
+  .description-text {
+    order: 3;
+    width: 90%;
+  }
 }
 
 /* You can add more styles here as needed */
