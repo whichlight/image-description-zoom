@@ -4,6 +4,8 @@
   flex-direction: column; /* Stack items vertically */
   align-items: center; /* Center items horizontally */
   min-height: 100vh; /* At least full viewport height */
+  padding-left:20px;
+  padding-right:20px;
 }
 
 .App h1 {
