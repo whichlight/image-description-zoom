@@ -8,6 +8,7 @@ function App() {
   const [descriptionIndex, setDescriptionIndex] = useState(0);
 
   useEffect(() => {
+    console.log(process.env.PUBLIC_URL);
     fetch(process.env.PUBLIC_URL + "/images_descriptions.json")
       .then((response) => response.json())
       .then((data) => setImageDescriptions(data.image_descriptions))
@@ -53,7 +54,7 @@ function App() {
           of detail written by AI. Move the slider to increase the detail of the
           description.{" "}
           <small>
-            Source:
+            src:
             <a
               target="_blank"
               href="https://unsplash.com/photos/man-wearing-black-jacket-fzcluHBur3o"
@@ -66,6 +67,9 @@ function App() {
             <a target="_blank" href="https://www.moma.org/artists/4016">
               [3]
             </a>
+            <a target="_blank" href="https://twitter.com/blakesamic">
+              [4]
+            </a>
           </small>
         </p>
       </div>
@@ -75,7 +79,7 @@ function App() {
           {imageDescriptions.map((img, index) => (
             <img
               key={index}
-              src={img.src}
+              src={process.env.PUBLIC_URL + "/" + img.src}
               alt={img.alt}
               onClick={() => handleChangeImage(index)}
               style={{
@@ -94,7 +98,11 @@ function App() {
         <div className="selected-image-container">
           <img
             className="selected-image"
-            src={imageDescriptions[selectedImageIndex].src}
+            src={
+              process.env.PUBLIC_URL +
+              "/" +
+              imageDescriptions[selectedImageIndex].src
+            }
             alt={descriptions[0]} // Using the alt text for the alt attribute
           />
         </div>
@@ -119,6 +127,19 @@ function App() {
           ></div>
         </div>
       </div>
+      <footer style={{ textAlign: "center", marginTop: "20px" }}>
+        <p>
+          made by{" "}
+          <a href="https://whichlight.com/" target="_blank">
+            whichlight
+          </a>{" "}
+          at{" "}
+          <a target="_blank" href="https://upstatement.com/">
+            Upstatement
+          </a>{" "}
+          as part of the Discovery AI prototyping series.
+        </p>
+      </footer>
     </div>
   );
 }
