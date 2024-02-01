@@ -107,7 +107,6 @@ function App() {
           />
         </div>
 
-        <div></div>
         <div className="description-text">
           <div className="slider-container">
             <input
@@ -127,7 +126,7 @@ function App() {
           ></div>
         </div>
       </div>
-      <footer style={{ textAlign: "center", marginTop: "20px" }}>
+      <footer className="footer">
         <p>
           made by{" "}
           <a href="https://whichlight.com/" target="_blank">

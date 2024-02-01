@@ -21,7 +21,7 @@
 
 .selected-image-container img {
   max-height: auto; /* Maximum image height */
-  max-width: 100%; /* Maximum image width is 100% of its container */
+  max-width: calc(100% - 40px); /* Ensures the element's width plus padding does not exceed the parent's width, Maximum image width is 100% of its container */;
   width: auto; /* Default width is set to auto */
   height: auto; /* Default height is set to auto */
   object-fit: contain; /* The image will be scaled to maintain its aspect ratio without being cropped */
@@ -71,22 +71,37 @@
 
 .info{
   width:400px;
+  max-width: 100%; /* Ensures the element's width plus padding does not exceed the parent's width, Maximum image width is 100% of its container */;
+
 }
 
 .slider-container input{
   width:400px;
+  max-width: 100%; /* Ensures the element's width plus padding does not exceed the parent's width, Maximum image width is 100% of its container */;
+
 }
 
 /* Style for the description text */
 .description-text {
-  padding: 0 20px 20px; /* Add some horizontal padding */
-  width: 500px; /* Set a max width for very wide screens */
+  width: 400px; /* Set a max width for very wide screens */
+  max-width:100%;
+  margin:auto;
 }
 
 .selected-content{
   display:flex;
   flex-direction: row; /* Default to row for larger screens */
+  max-width:100%;
+}
 
+.footer{
+  text-align: "center";
+  margin-top: "20px";
+  color:gray;
+}
+
+.footer a{
+ color:gray;
 }
 
 
@@ -101,13 +116,13 @@
 
   .slider-container {
     order: 4;
-    width: 100%; /* Adjust the width of the slider for mobile */
   }
 
   .description-text {
     order: 3;
-    width: 90%;
   }
 }
+
+
 
 /* You can add more styles here as needed */
