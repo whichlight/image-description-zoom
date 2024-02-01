@@ -85,7 +85,8 @@
 .description-text {
   width: 400px; /* Set a max width for very wide screens */
   max-width:100%;
-  margin:auto;
+  margin-left: auto;
+  margin-right: auto; 
 }
 
 .selected-content{
@@ -120,6 +121,8 @@
 
   .description-text {
     order: 3;
+    align-items:flex-start;
+
   }
 }
 
